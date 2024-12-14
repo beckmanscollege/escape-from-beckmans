@@ -1,37 +1,29 @@
 const WORLD = {
-	title: 'Team 4',
+	title: 'Sample World',
 	levels: [
-				{
-			title: 'Covid house',
-			url: 'https://escapefromhyperisland.github.io/world-4/level-1/',
-			author: {
-				name: 'Lovisa Elensky',
-				link: 'https://clever-ride-30d95b.netlify.app/',
-			},
-		},
 		{
-			title: 'The sleep demon',
-			url: 'https://emmy-codes.github.io/puzzle-game/',
+			title: 'Level 1',
+			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-1/',
 			author: {
-				name: 'Emma Scott-Allen',
-				link: 'https://www.linkedin.com/in/emma-scott-allen-86b7a6140/',
-			},
-		},
-		{
-			title: 'Tiny Nightmares',
-			url: 'https://aleksandraastaroth.github.io/tiny-nightmares/',
-			author: {
-				name: '',
+				name: 'Sample Student 1',
 				link: '',
 			},
 		},
 		{
-			title: 'Angelo The Italian',
-			url: 'https://escapefromhyperisland.github.io/world4-level2/',
+			title: 'Level 2',
+			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-2/',
 			author: {
-				name: 'Pablo Galisteo',
-				link: 'https://www.linkedin.com/in/pablo-galisteo-295795176/',
-			},	
+				name: 'Sample Student 2',
+				link: '',
+			},
+		},
+		{
+			title: 'Level 3',
+			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-3/',
+			author: {
+				name: 'Sample Student 3',
+				link: '',
+			},
 		},
 	],
 };

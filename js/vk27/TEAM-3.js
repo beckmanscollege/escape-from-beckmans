@@ -1,60 +1,28 @@
 const WORLD = {
-	title: 'Team 3',
+	title: 'Sample World',
 	levels: [
 		{
-			title: 'Dreamcatcher',
-			url: 'https://escapefromhyperisland.github.io/world-3/',
+			title: 'Level 1',
+			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-1/',
 			author: {
-				name: '',
+				name: 'Sample Student 1',
 				link: '',
 			},
 		},
 		{
-			title: 'Dizzy dreams',
-			url: 'https://escapefromhyperisland.github.io/dizzy-dream/',
+			title: 'Level 2',
+			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-2/',
 			author: {
-				name: 'Sofia Cronström',
-				link: 'https://www.linkedin.com/in/sofia-cronstr%C3%B6m-080a4998/',
-			},
-		},
-		{
-			title: 'mordor ',
-			url: 'https://escapefromhyperisland.github.io/Mordor/',
-			author: {
-				name: 'Mithila Ahmed',
-				link: 'https://www.linkedin.com/in/mithila-ahmed-aa562353/',
-			},
-		},
-		{
-			title: 'hopis-nighmare ',
-			url: 'https://hyperhopi.github.io/hopis-nightmare/',
-			author: {
-				name: 'hyperhopi',
+				name: 'Sample Student 2',
 				link: '',
 			},
 		},
 		{
-			title: 'spaces',
-			url: 'https://escapefromhyperisland.github.io/spaces/',
+			title: 'Level 3',
+			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-3/',
 			author: {
-				name: 'Hamiat Nalwanga',
-				link: 'https://www.linkedin.com/in/hamiat-nalwanga-b5a93bb1/',
-			},
-		},
-		{
-			title: 'monsters under the bed ',
-			url: 'https://escapefromhyperisland.github.io/A-frame-project/',
-			author: {
-				name: 'Sumana Sattar',
+				name: 'Sample Student 3',
 				link: '',
-			},
-		},
-		{
-			title: 'candy land ',
-			url: 'https://escapefromhyperisland.github.io/candy-world/',
-			author: {
-				name: 'Supipi Algama',
-				link: 'https://www.linkedin.com/in/supipis/',
 			},
 		},
 	],

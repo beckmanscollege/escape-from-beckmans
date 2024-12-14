@@ -1,51 +1,27 @@
 const WORLD = {
-	title: 'Escaping HI-22',
+	title: 'Sample World',
 	levels: [
 		{
-			title: 'Hack the Vault',
-			url: 'https://escapefromhyperisland.github.io/world2-level1/',
+			title: 'Level 1',
+			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-1/',
 			author: {
-				name: 'Cecilia Lobo',
-				link: 'https://www.linkedin.com/in/cecilialobo/',
-			},
-		},
-		{
-			title: 'Star Bores',
-			url: 'https://adam-space-game.netlify.app/',
-			author: {
-				name: '',
+				name: 'Sample Student 1',
 				link: '',
 			},
 		},
 		{
-			title: 'Foggy Forest',
-			url: 'https://escapefromhyperisland.github.io/world2-level3/',
+			title: 'Level 2',
+			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-2/',
 			author: {
-				name: '',
+				name: 'Sample Student 2',
 				link: '',
 			},
 		},
 		{
-			title: 'The cabbin',
-			url: 'https://escapefromhyperisland.github.io/world2-level4/level-4/',
+			title: 'Level 3',
+			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-3/',
 			author: {
-				name: 'Fanny Johansson',
-				link: 'https://www.linkedin.com/in/fanny-johansson-69996814a/',
-			},
-		},
-		{
-			title: 'Itsy Bitsy Space',
-			url: 'https://escapefromhyperisland.github.io/world-2/level-5/',
-			author: {
-				name: 'Karolin Frennert',
-				link: 'https://www.linkedin.com/in/karolinfrennert/',
-			},
-		},
-		{
-			title: 'Fly Back',
-			url: 'https://hi-22.herokuapp.com/',
-			author: {
-				name: '',
+				name: 'Sample Student 3',
 				link: '',
 			},
 		},
