@@ -1,52 +1,22 @@
 import { GAME } from './GAME.js';
 
-let currWorld, currLevel;
+let currWorld, currLevel, playerName, gameStartTime, elapsedTime = 0;
 
 const $level = document.querySelector('#level');
 const LOCAL = false;
 const LOCAL_URL = 'http://localhost:8080';
-const PUBLIC_URL = 'https://escapefromhyperisland.github.io';
+const PUBLIC_URL = 'https://beckmanscollege.github.io/escape-from-beckmans/';
 const TRANSITION_TIME = 2000;
 
 const urlParams = new URLSearchParams(window.location.search);
 let worldIndex = urlParams.get('world');
 let levelIndex = urlParams.get('level');
 
-if (worldIndex > 0) worldIndex = worldIndex - 1
-if (levelIndex > 0) levelIndex = levelIndex - 1
-
-/*switch (worldIndex) {
-	case '1':
-		worldIndex = 0;
-		break;
-	case '2':
-		worldIndex = 1;
-		break;
-	case '3':
-		worldIndex = 2;
-		break;
-	case '4':
-		worldIndex = 3;
-		break;
-	case '5':
-		worldIndex = 4;
-		break;
-	case '6':
-		worldIndex = 5;
-		break;
-	case '7':
-		worldIndex = 6;
-		break;
-	case '8':
-		worldIndex = 7;
-		break;
-	case '9':
-		worldIndex = 8;
-		break;
-}*/
+if (worldIndex > 0) worldIndex -= 1;
+if (levelIndex > 0) levelIndex -= 1;
 
 const pane = new Tweakpane.Pane();
-if (levelIndex === null){
+if (levelIndex === null) {
 	const nextLevelBtn = pane.addButton({ title: 'next level' });
 	nextLevelBtn.on('click', nextLevel);
 }
@@ -55,12 +25,32 @@ const authorBtn = pane.addButton({ title: 'author' });
 restartLevelBtn.on('click', restartLevel);
 
 function startGame() {
+	playerName = prompt("Welcome! Please enter your name:") || "Player";
+	gameStartTime = Date.now();
+	elapsedTime = 0;
+
 	init();
 	setup();
 	showLevel();
-	setTimeout(function () {
+	startTimer(); // Start the in-game timer
+
+	setTimeout(() => {
 		document.body.classList.remove('transition');
 	}, TRANSITION_TIME);
+}
+
+function startTimer() {
+	setInterval(() => {
+		elapsedTime++;
+		const formattedTime = formatTime(elapsedTime);
+		document.title = `${formattedTime} | ${currWorld.title} - ${currLevel.title}`;
+	}, 1000); // Update every second
+}
+
+function formatTime(seconds) {
+	const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+	const secs = (seconds % 60).toString().padStart(2, '0');
+	return `${mins}:${secs}`;
 }
 
 function init() {
@@ -74,13 +64,14 @@ function init() {
 		GAME.order = rarr(GAME.worlds.length);
 	} else if (GAME.order === Array) {
 		GAME.order = [];
-		GAME.worlds.forEach((world, index) => {
+		GAME.worlds.forEach((_, index) => {
 			GAME.order[index] = index;
 		});
 	}
+
 	for (let world of GAME.worlds) {
 		world.order = [];
-		world.levels.forEach((level, index) => {
+		world.levels.forEach((_, index) => {
 			world.order[index] = index;
 		});
 	}
@@ -104,7 +95,8 @@ function getLevel() {
 
 function nextLevel() {
 	document.body.classList.add('transition');
-	setTimeout(function () {
+	console.log(currWorld, GAME.order.length)
+	setTimeout(() => {
 		currWorld.order.shift();
 		if (currWorld.order.length === 0 && GAME.order.length === 1) {
 			gameOver();
@@ -124,10 +116,9 @@ function showLevel() {
 	const path = currLevel.url;
 	$level.src = new URL(path, window.location.href);
 	document.body.className = currLevel.title.slugify();
-	// document.body.className = `${worldIndex}${levelIndex}`;
-	document.title = `${currWorld.title} - ${currLevel.title}`;
 	updateAuthor();
-	setTimeout(function () {
+
+	setTimeout(() => {
 		document.body.classList.remove('transition');
 	}, TRANSITION_TIME);
 }
@@ -139,9 +130,9 @@ function updateAuthor() {
 		authorBtn.title = currLevel.author.name;
 	}
 	if (currLevel.author.link) {
-		authorBtn.on('click', function () {
+		authorBtn.onclick = () => {
 			window.open(currLevel.author.link, '_blank');
-		});
+		};
 	}
 }
 
@@ -150,16 +141,32 @@ function restartLevel() {
 }
 
 function gameOver() {
-	alert('Game Over!');
+	const playTime = Math.floor((Date.now() - gameStartTime) / 1000);
+	const message = `Game Over, ${playerName}! You played for ${formatTime(playTime)}.`;
+	alert(message);
+	console.log(message);
+
+	saveHighscore(playerName, playTime);
+	displayHighscores();
 }
 
-// Courtesy of https://stackoverflow.com/questions/25098021/securityerror-blocked-a-frame-with-origin-from-accessing-a-cross-origin-frame
-window.addEventListener('message', function (event) {
-	switch (event.data) {
-		case 'nextLevel':
-			nextLevel();
-			break;
-	}
+function saveHighscore(name, time) {
+	const highscores = JSON.parse(localStorage.getItem('highscores')) || [];
+	highscores.push({ name, time });
+	highscores.sort((a, b) => a.time - b.time); // Sort by playtime (ascending)
+	localStorage.setItem('highscores', JSON.stringify(highscores.slice(0, 10))); // Keep top 10
+}
+
+function displayHighscores() {
+	const highscores = JSON.parse(localStorage.getItem('highscores')) || [];
+	console.log("Highscores:");
+	highscores.forEach((score, index) => {
+		console.log(`${index + 1}. ${score.name} - ${formatTime(score.time)}`);
+	});
+}
+
+window.addEventListener('message', (event) => {
+	if (event.data === 'nextLevel') nextLevel();
 });
 
 startGame();
