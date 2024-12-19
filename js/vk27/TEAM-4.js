@@ -1,27 +1,35 @@
 const WORLD = {
-	title: 'Sample World',
+	title: 'Quick Quit',
 	levels: [
 		{
-			title: 'Level 1',
-			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-1/',
+			title: '.bossHack',
+			url: 'https://bosshack2.glitch.me',
 			author: {
-				name: 'Sample Student 1',
+				name: 'Linn Willebrand',
 				link: '',
 			},
 		},
 		{
-			title: 'Level 2',
-			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-2/',
+			title: `Shop on your boss' card`,
+			url: 'https://shop-on-your-boss-card.glitch.me/',
 			author: {
-				name: 'Sample Student 2',
+				name: 'Emma Ljungqvist',
 				link: '',
 			},
 		},
 		{
-			title: 'Level 3',
-			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-3/',
+			title: 'SNOOZE',
+			url: 'https://quick-quit-1-ve.glitch.me',
 			author: {
-				name: 'Sample Student 3',
+				name: 'Ve Örnehed',
+				link: '',
+			},
+		},
+		{
+			title: 'Blame the Office',
+			url: 'https://quickquit-level-4.glitch.me/',
+			author: {
+				name: 'Jesper Smeding',
 				link: '',
 			},
 		},

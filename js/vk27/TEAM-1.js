@@ -1,27 +1,35 @@
 const WORLD = {
-	title: 'Sample World',
+	title: 'Under Vatten',
 	levels: [
 		{
-			title: 'Level 1',
-			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-1/',
+			title: 'Fish for Trash1',
+			url: 'https://fishfortrash.glitch.me',
 			author: {
-				name: 'Sample Student 1',
+				name: 'Alva Kinneholm',
 				link: '',
 			},
 		},
 		{
-			title: 'Level 2',
-			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-2/',
+			title: 'Fishing for answers',
+			url: 'https://undadawatah.glitch.me/',
 			author: {
-				name: 'Sample Student 2',
+				name: 'Fahed Dehchar',
 				link: '',
 			},
 		},
 		{
-			title: 'Level 3',
-			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-3/',
+			title: 'Open the shell',
+			url: 'https://opentheshell.glitch.me',
 			author: {
-				name: 'Sample Student 3',
+				name: 'Tindra Berglund',
+				link: '',
+			},
+		},
+		{
+			title: 'What am I',
+			url: 'https://hello-from-under-water.glitch.me',
+			author: {
+				name: 'Hannah Mårtensson',
 				link: '',
 			},
 		},

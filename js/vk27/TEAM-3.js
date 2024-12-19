@@ -1,27 +1,19 @@
 const WORLD = {
-	title: 'Sample World',
+	title: 'How to satisfy a cat',
 	levels: [
 		{
-			title: 'Level 1',
-			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-1/',
+			title: 'Mata katten',
+			url: 'https://bubble-eminent-shingle.glitch.me/',
 			author: {
-				name: 'Sample Student 1',
+				name: 'Lawrence Ponsonby',
 				link: '',
 			},
 		},
 		{
-			title: 'Level 2',
-			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-2/',
+			title: 'Magiska katten',
+			url: 'https://katt-aventyr.glitch.me/',
 			author: {
-				name: 'Sample Student 2',
-				link: '',
-			},
-		},
-		{
-			title: 'Level 3',
-			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-3/',
-			author: {
-				name: 'Sample Student 3',
+				name: 'Caspar Broms',
 				link: '',
 			},
 		},

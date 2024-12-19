@@ -1,27 +1,35 @@
 const WORLD = {
-	title: 'Sample World',
+	title: 'Lunch Break',
 	levels: [
 		{
-			title: 'Level 1',
-			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-1/',
+			title: 'Lunch Break: Level 1',
+			url: 'https://lunch-break-level-1.glitch.me/',
 			author: {
-				name: 'Sample Student 1',
+				name: 'Vivi Tang',
 				link: '',
 			},
 		},
 		{
 			title: 'Level 2',
-			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-2/',
+			url: 'http://lunch-break-level-2.glitch.me/',
 			author: {
-				name: 'Sample Student 2',
+				name: 'Silje Nordback',
 				link: '',
 			},
 		},
 		{
-			title: 'Level 3',
-			url: 'https://beckmanscollege.github.io/escape-from-beckmans/sample-world/level-3/',
+			title: 'Lunch Break: Level 3',
+			url: 'https://lunch-break-level-3.glitch.me/',
 			author: {
-				name: 'Sample Student 3',
+				name: 'Simon Grey',
+				link: '',
+			},
+		},
+		{
+			title: 'Lunch Break: Level 4',
+			url: 'https://lunch-break-level-4.glitch.me/1.html',
+			author: {
+				name: 'Emma Tungelstedt',
 				link: '',
 			},
 		},
