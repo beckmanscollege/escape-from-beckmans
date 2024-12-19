@@ -2,18 +2,18 @@ const WORLD = {
 	title: 'Under Vatten',
 	levels: [
 		{
-			title: 'Fish for Trash1',
-			url: 'https://fishfortrash.glitch.me',
-			author: {
-				name: 'Alva Kinneholm',
-				link: '',
-			},
-		},
-		{
 			title: 'Fishing for answers',
 			url: 'https://undadawatah.glitch.me/',
 			author: {
 				name: 'Fahed Dehchar',
+				link: '',
+			},
+		},
+		{
+			title: 'Fish for Trash',
+			url: 'https://fishfortrash.glitch.me',
+			author: {
+				name: 'Alva Kinneholm',
 				link: '',
 			},
 		},
