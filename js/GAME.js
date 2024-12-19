@@ -5,7 +5,7 @@ import { WORLD as WORLD_4 } from './vk27/TEAM-4.js'
 
 const GAME = {
 	title: 'Escape from Beckmans',
-	order: 'random',
+	// order: 'random',
 	worlds: [WORLD_1, WORLD_2, WORLD_3, WORLD_4],
 }
 
