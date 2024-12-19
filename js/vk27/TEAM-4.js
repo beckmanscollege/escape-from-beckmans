@@ -2,6 +2,14 @@ const WORLD = {
 	title: 'Quick Quit',
 	levels: [
 		{
+			title: 'SNOOZE',
+			url: 'https://quick-quit-1-ve.glitch.me',
+			author: {
+				name: 'Ve Örnehed',
+				link: '',
+			},
+		},
+		{
 			title: '.bossHack',
 			url: 'https://bosshack2.glitch.me',
 			author: {
@@ -14,14 +22,6 @@ const WORLD = {
 			url: 'https://shop-on-your-boss-card.glitch.me/',
 			author: {
 				name: 'Emma Ljungqvist',
-				link: '',
-			},
-		},
-		{
-			title: 'SNOOZE',
-			url: 'https://quick-quit-1-ve.glitch.me',
-			author: {
-				name: 'Ve Örnehed',
 				link: '',
 			},
 		},
