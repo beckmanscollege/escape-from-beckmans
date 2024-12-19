@@ -11,7 +11,7 @@ const WORLD = {
 		},
 		{
 			title: 'Lunch Break: Level 2',
-			url: 'http://lunch-break-level-2.glitch.me/',
+			url: 'https://lunch-break-level-2.glitch.me/',
 			author: {
 				name: 'Silje Nordback',
 				link: '',
