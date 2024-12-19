@@ -2,6 +2,14 @@ const WORLD = {
 	title: 'How to satisfy a cat',
 	levels: [
 		{
+			title: 'Tvätta katten',
+			url: 'https://efficacious-navy-tiara.glitch.me',
+			author: {
+				name: 'Enya Borg',
+				link: '',
+			},
+		},
+		{
 			title: 'Mata katten',
 			url: 'https://bubble-eminent-shingle.glitch.me/',
 			author: {
